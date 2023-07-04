@@ -77,11 +77,12 @@ TEMPLATES = [
 WSGI_APPLICATION = 'july4demo.wsgi.application'
 
 
-
-DATABASES['default'] = dj_database_url.config(
-    conn_max_age=600,
-    conn_health_checks=True,
-)
+DATABASES = {
+    'default': dj_database_url.config(
+        conn_max_age=600,
+        conn_health_checks=True,
+    )
+}
 
 
 # Password validation
