@@ -87,7 +87,8 @@ print(os.environ["DATABASE_URL"])
 print(DATABASES)
 print(os.environ["DB1_INSTANCE"])
 
-DATABASES['default']['host'] = f'/cloudsql/{os.environ["DB1_INSTANCE"]}'
+if os.environ.get("DB1_INSTANCE"):
+    DATABASES['default']['host'] = f'/cloudsql/{os.environ["DB1_INSTANCE"]}'
 print(DATABASES)
 
 
