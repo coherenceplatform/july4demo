@@ -9,3 +9,4 @@ server:
     engine: postgres
     version: 14
     type: database
+    adapter: postgresql

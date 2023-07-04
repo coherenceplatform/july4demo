@@ -83,7 +83,7 @@ DATABASES = {
         conn_health_checks=True,
     )
 }
-
+print(os.environ["DATABASE_URL"])
 print(DATABASES)
 
 
