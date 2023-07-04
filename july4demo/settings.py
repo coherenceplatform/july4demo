@@ -83,13 +83,10 @@ DATABASES = {
         conn_health_checks=True,
     )
 }
-print(os.environ["DATABASE_URL"])
-print(DATABASES)
-print(os.environ["DB1_INSTANCE"])
 
+# Coherence - this is to handle workspaces case and cloud run case on GCP, on AWS will never be used
 if os.environ.get("DB1_INSTANCE"):
     DATABASES['default']['HOST'] = f'/cloudsql/{os.environ["DB1_INSTANCE"]}'
-print(DATABASES)
 
 
 # Password validation
